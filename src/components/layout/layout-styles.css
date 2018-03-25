@@ -1,0 +1,20 @@
+.layout {
+  display: flex;
+  justify-content: center;
+}
+
+.layout__content {
+  margin: 3rem 1rem 5rem;
+  flex: 1;
+  border: 1px solid;
+}
+
+/* TODO: Add breakpoints to variable, not possible with CSS variables, consider
+PostCSS solution... */
+@media (min-width: 320px) {  
+  .layout__content {
+    margin: 5rem 2rem 12rem;
+    max-width: var(--spring);
+    flex: 1;
+  }
+}
