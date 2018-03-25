@@ -1,15 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <p>
-          Hello world!
-        </p>
-      </div>
-    );
-  }
-}
+// Components 
+import RestaurantsPage from './pages/restaurants';
+
+const App = () => (
+  <Router>
+    <div className="App">
+      <Switch>
+        <Route exact path="/" component={RestaurantsPage} />
+      </Switch>
+    </div>
+  </Router>
+)
 
 export default App;
