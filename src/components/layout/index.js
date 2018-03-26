@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+
+// Styles
 import './layout-styles.css';
+
+// Components
+import Hero from 'components/hero';
+
 
 class Layout extends Component {
   static propTypes = {
     nav: PropTypes.element,
-    header: PropTypes.element,
+    heroContent: PropTypes.element,
     content: PropTypes.element,
   }
 
@@ -17,14 +23,18 @@ class Layout extends Component {
   render() {
     const {
       nav,
-      header,
+      heroContent,
       content
     } = this.props;
 
     return (
       <div className="layout">
-        {nav}
-        {header}
+        <header className="layout__header">
+          {nav}
+          <Hero>
+            {heroContent}
+          </Hero>
+        </header>
         <main className="layout__content">
           {content}
         </main>

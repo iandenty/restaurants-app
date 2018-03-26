@@ -11,7 +11,17 @@ registerServiceWorker();
 
 // Set CSS variables
 const cssConfig = {
-  maxWidth: 1126
+  maxWidth: 1126,
+  colors: {
+    primary: '#00CCBC',
+    secondary: '#ffffff',
+  },
+  fontColor: {
+    secondary: '#00A396'
+  }
 };
 
 root.style.setProperty("--spring", `${cssConfig.maxWidth}px`);
+root.style.setProperty("--color-primary", cssConfig.colors.primary);
+root.style.setProperty("--color-secondary", cssConfig.colors.secondary);
+root.style.setProperty("--font-color-secondary", cssConfig.fontColor.secondary);

@@ -1,0 +1,29 @@
+.hero {
+  min-height: 250px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-primary);
+  background-image: url(/hero.svg);
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.hero__content {
+  margin: 5em 1em;
+  flex: 1;
+  color: var(--color-secondary);
+}
+
+.hero__title {
+  font-size: 1.6rem;
+}
+
+/* TODO: Add breakpoints to variable, not possible with CSS variables, consider
+PostCSS solution... */
+@media (min-width: 320px) {  
+  .hero__content {
+    max-width: var(--spring);
+    flex: 1;
+    margin: 5em 2em;
+  }
+}
