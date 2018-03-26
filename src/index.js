@@ -17,6 +17,7 @@ const cssConfig = {
     secondary: '#ffffff',
   },
   fontColor: {
+    primary: '#2E3333',
     secondary: '#00A396'
   }
 };
@@ -24,4 +25,5 @@ const cssConfig = {
 root.style.setProperty("--spring", `${cssConfig.maxWidth}px`);
 root.style.setProperty("--color-primary", cssConfig.colors.primary);
 root.style.setProperty("--color-secondary", cssConfig.colors.secondary);
+root.style.setProperty("--font-color-primary", cssConfig.fontColor.primary);
 root.style.setProperty("--font-color-secondary", cssConfig.fontColor.secondary);

@@ -1,0 +1,58 @@
+.restaurants-list-item {
+  width: 100%;
+  padding: 1.5rem 1.6rem;
+}
+
+.restaurants-list-item__image {
+  width: 100%;
+}
+
+.restaurants-list-item__title {
+  color: var(--font-color-primary);
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+  font-weight: normal;
+  margin-top: .8rem;
+  margin-bottom: .5rem;
+}
+
+.restaurants-list-item__link {
+  text-decoration: none;
+}
+
+.restaurants-list-item__tags {
+  display: flex;
+  color: #828585;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  font-weight: normal;
+  flex-wrap: wrap;
+}
+
+.restaurants-list-item__tag {
+  padding-right: 1.5rem;
+  position: relative;
+}
+
+.restaurants-list-item__tag:before {
+  content: '\2022';
+  position: absolute;
+  line-height: 1.7rem;
+  left: calc(100% - (1.5rem/2));
+  transform: translateX(-50%);
+}
+
+
+/* TODO: Add breakpoints to variable, not possible with CSS variables, consider
+PostCSS solution... */
+@media (min-width: 320px) {  
+  .restaurants-list-item {
+    padding: 1.5rem 1.6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .restaurants-list-item {
+    width: calc(100%/3);
+  }
+}

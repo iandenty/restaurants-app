@@ -1,0 +1,31 @@
+.restaurants-list__title {
+  text-align: left;
+  color: var(--font-color-primary);
+  font-size: 2.8rem;
+  line-height: 3.4rem;
+  font-weight: normal;
+  margin-bottom: 1.4rem;
+}
+
+.restaurants-list__list {
+  display: flex;
+  flex-direction: column;
+  margin-left: -1.6rem;
+  margin-right: -1.6rem;
+}
+
+/* TODO: Add breakpoints to variable, not possible with CSS variables, consider
+PostCSS solution... */
+@media (min-width: 320px) {  
+  .restaurants-list__title {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .restaurants-list__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+}
