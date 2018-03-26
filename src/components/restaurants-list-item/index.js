@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import slugify from 'slugify';
+import classNames from 'classnames';
 
 // Styles
 import './restaurants-list-item-styling.css';
@@ -17,7 +18,11 @@ class RestaurantsListItem extends Component {
   }
 
   state = {
+    loading: true
+  }
 
+  handleOnload = () => {
+    this.setState({loading: false});
   }
 
   render() {
@@ -29,6 +34,8 @@ class RestaurantsListItem extends Component {
       tags
     } = this.props;
 
+    const classes = classNames({'restaurants-list-item__image--loading': this.state.loading});
+
     const slug = slugify(name);
 
     return (
@@ -36,8 +43,9 @@ class RestaurantsListItem extends Component {
         <Link className="restaurants-list-item__link" to={`/restaurants/${slug}`}>
           <img 
             src={image} 
-            className="restaurants-list-item__image"
+            className={`restaurants-list-item__image ${classes}`}
             alt={`Food from ${name}`}
+            onLoad={this.handleOnload}
           />
           <h3 className="restaurants-list-item__title">{name}</h3>
           <ul className="restaurants-list-item__tags">
