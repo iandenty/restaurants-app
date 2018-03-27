@@ -34,7 +34,7 @@ class NavBar extends Component {
             </button>
             <button className="navbar__user-button navbar__user-button--last">
               <img 
-                src="country@3x.png" 
+                src="/country@3x.png" 
                 className="navbar__language-icon" 
                 alt="Language English United Kingdom" 
               />
