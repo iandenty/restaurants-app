@@ -24,3 +24,9 @@ ul {
   list-style: none;
   padding: 0;
 }
+
+button {
+  padding: 0;
+  border: none;
+  background: none;
+}

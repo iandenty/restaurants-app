@@ -6,11 +6,11 @@ import './layout-styles.css';
 
 // Components
 import Hero from 'components/hero';
+import NavBar from 'components/navbar';
 
 
 class Layout extends Component {
   static propTypes = {
-    nav: PropTypes.element,
     heroContent: PropTypes.element,
     content: PropTypes.element,
   }
@@ -30,7 +30,7 @@ class Layout extends Component {
     return (
       <div className="layout">
         <header className="layout__header">
-          {nav}
+          <NavBar />
           <Hero>
             {heroContent}
           </Hero>
